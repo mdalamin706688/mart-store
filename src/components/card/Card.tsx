@@ -7,7 +7,11 @@ const Card: React.FC = () => {
       <ProductCard productId="1" />
       <ProductCard productId="2" />
       <ProductCard productId="3" />
-      
+      <ProductCard productId="4" />
+      <ProductCard productId="5" />
+      <ProductCard productId="6" />
+      <ProductCard productId="7" />
+      <ProductCard productId="8" />
     </div>
   );
 };
