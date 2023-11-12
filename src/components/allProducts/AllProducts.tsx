@@ -249,14 +249,14 @@ function AllProducts() {
                     >
                       View Details
                     </Link>
-                    {/* <button
+                    <button
                       onClick={(event) => handleAddToCart(event, product)}
                       className={`btn btn-sm btn-primary text-white rounded ${
                         user ? "" : "cursor"
                       }`}
                     >
                       Add to Cart
-                    </button> */}
+                    </button>
                   </div>
                 </div>
               </div>
