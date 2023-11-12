@@ -29,7 +29,7 @@ Welcome to MartStore, my own React-based single-page e-commerce application. Mar
 
 - Visit [MartStore](https://mart-store-ecommerce-products.web.app/) to explore the home page, featuring a navigation bar with links to Home, All Products, Contact Us, and Login/Register.
 - Enjoy a real-time search feature with a dropdown displaying matching products as you type.
-- Experience a visually appealing parallax effect and a unique design on the homepage.
+- Experience a visually appealing aos effect and a unique design on the homepage.
 
 ## All Products Page
 
