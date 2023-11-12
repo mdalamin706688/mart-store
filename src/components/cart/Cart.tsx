@@ -212,14 +212,14 @@ function Cart() {
             ))}
           </div>
         )}
-        {/* <div className="mt-4">
+        <div className="mt-4">
           <button
             onClick={proceedToPayment}
             className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
           >
             Proceed to Payment
           </button>
-        </div> */}
+        </div>
       </div>
 
       {/* Custom styled alert */}
