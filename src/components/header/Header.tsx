@@ -51,7 +51,7 @@ const Header = () => {
     <div className="w-full border border-2 p-2 bg-gray-200">
       <div className="flex flex-col sm:flex-row justify-between items-center container mx-auto">
         <div className="flex items-center mb-4 sm:mb-0">
-          {/* ... (your logo code) */}
+         
           <svg
             xmlns="http://www.w3.org/2000/svg"
             x="0px"
@@ -70,6 +70,7 @@ const Header = () => {
               d="M3.588,36.032c-0.453,0.737-0.961,1.593-1.393,2.274c-0.387,0.652-0.179,1.494,0.467,1.892	l9.057,5.564c0.638,0.429,1.504,0.261,1.934-0.377c0.018-0.027,0.035-0.054,0.051-0.082c0.362-0.605,0.829-1.391,1.338-2.233	c3.588-5.912,7.197-5.189,13.703-2.087l8.952,4.243c0.695,0.33,1.526,0.035,1.857-0.658c0.006-0.012,0.012-0.025,0.017-0.037	l4.312-9.738c0.305-0.695-0.005-1.506-0.697-1.822c-1.895-0.89-5.664-2.664-9.057-4.299C21.896,22.761,11.523,23.157,3.588,36.032z"
             ></path>
           </svg>
+          Mart Store
         </div>
         <div className="flex flex-col sm:flex-row items-center gap-2">
           {user ? (
