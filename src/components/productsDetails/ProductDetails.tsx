@@ -5,7 +5,7 @@ import Header from "../header/Header";
 import Footer from "../footer/Footer";
 import { auth, firestore } from "../../utils/firebase";
 import { User, onAuthStateChanged } from "firebase/auth";
-import { collection, addDoc } from "@firebase/firestore";
+import { collection, addDoc, getDocs } from "@firebase/firestore";
 
 const ALERT_TYPES = {
   SUCCESS: "success",
@@ -82,19 +82,33 @@ function ProductDetails() {
         const user = auth.currentUser;
         if (user) {
           const orderRef = collection(firestore, `users/${user.uid}/cart`);
-          const productDetails = {
-            productId: product.id,
-            quantity: 1,
-            name: product.title,
-            price: product.price,
-            thumbnail: product.thumbnail,
-          };
-          await addDoc(orderRef, productDetails);
 
-          setAlert({
-            type: ALERT_TYPES.SUCCESS,
-            message: "Successfully added to cart!",
-          });
+          // Check if the item is already in the cart
+          const querySnapshot = await getDocs(orderRef);
+          const isInCart = querySnapshot.docs.some(
+            (doc) => doc.data().productId === product.id
+          );
+
+          if (isInCart) {
+            setAlert({
+              type: ALERT_TYPES.ERROR,
+              message: "Item is already in the cart.",
+            });
+          } else {
+            const productDetails = {
+              productId: product.id,
+              quantity: 1,
+              name: product.title,
+              price: product.price,
+              thumbnail: product.thumbnail,
+            };
+            await addDoc(orderRef, productDetails);
+
+            setAlert({
+              type: ALERT_TYPES.SUCCESS,
+              message: "Successfully added to cart!",
+            });
+          }
         } else {
           setAlert({
             type: ALERT_TYPES.ERROR,
